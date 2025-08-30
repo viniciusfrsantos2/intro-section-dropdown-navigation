@@ -1,39 +1,182 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Intro section with dropdown navigation</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>Intro section with dropdown navigation</title>
 </head>
 <body>
 
-  Features
-  Company
-  Careers
-  About
+  <div class="overlay" hidden></div>
 
-  Login
-  Register
+  <header class="header">
 
-  Make remote work
+    <div class="header__logo">
+      <img src="images/logo.svg" alt="Snap logo.">
+    </div>
 
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
+    <button
+    class="header__menu-btn"
+    aria-expanded="false"
+    aria-controls="menu">
+      <img 
+      src="images/icon-menu.svg" 
+      alt=""
+      aria-label="Open menu">
+    </button>
 
-  Learn more
+    <nav
+     class="header__menu"
+     id="menu" 
+     hidden>
+      <ul class="menu__container list-flex">
+
+        <li class="menu__item">
+          <button
+          class="dropdown__btn"
+          aria-expanded="false"
+          aria-controls="features-menu">
+            Features
+          <img 
+          src="images/icon-arrow-down.svg" 
+          alt="" 
+          aria-hidden="true"
+          class="dropdown__btn-arrow">
+          </button>
+
+          <ul 
+          id="features-menu"
+          class="dropdown__container"
+          hidden>
+
+            <li class="dropdown__item">
+              <a href="#">
+                <img 
+                src="images/icon-todo.svg" 
+                alt=""
+                aria-hidden="true"
+                class="dropdown__icon">Todo list</a>
+            </li>
+            <li class="dropdown__item">
+              <a href="#">
+                <img 
+                src="images/icon-calendar.svg" 
+                alt=""
+                aria-hidden="true"
+                class="dropdown__icon">Calendar</a>
+            </li>
+            <li class="dropdown__item">
+              <a href="#">
+                <img 
+                src="images/icon-reminders.svg" 
+                alt=""
+                aria-hidden="true"
+                class="dropdown__icon">Reminders</a>
+            </li>
+            <li class="dropdown__item">
+              <a href="#">
+                <img 
+                src="images/icon-planning.svg" 
+                alt=""
+                aria-hidden="true"
+                class="dropdown__icon">Planning</a>
+            </li>
+          </ul>
+        </li>
+        
+        <li class="menu__item">
+          <button
+          class="dropdown__btn"
+          aria-expanded="false"
+          aria-controls="company-menu">
+            Company
+          <img 
+          src="images/icon-arrow-down.svg" 
+          alt="" 
+          aria-hidden="true"
+          class="dropdown__btn-arrow">
+          </button>
+
+          <ul 
+          id="company-menu"
+          class="dropdown__container"
+          hidden>
+
+            <li class="dropdown__item">
+              <a href="#">History</a>
+            </li>
+            <li class="dropdown__item">
+              <a href="#">Our Team</a>
+            </li>
+            <li class="dropdown__item">
+              <a href="#">Blog</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu__item">
+          <a href="">Careers</a>
+        </li>
+
+        <li class="menu__item">
+          <a href="">About</a>
+        </li>
+      </ul>
+
+      <ul class="menu__item-buttons list-flex">
+        <li class="item__btn-login total-flex-centralize">
+          <a href="#">Login</a>
+        </li>
+        <li class="item__btn-register total-flex-centralize">
+          <a href="#">Register</a>
+        </li>
+      </ul>
+
+    </nav>
+
+  </header>
+
+  <main class="main">
+    <div class="main__container">
+
+      <div class="main__img-container">
+        <picture>
+          <source 
+          srcset="images/image-hero-desktop.png"  
+          media="(min-width: 64rem)">
+
+          <img 
+          src="images/image-hero-mobile.png" 
+          alt="A hero image about remote work">
+        </picture>
+      </div>
+
+      <article class="main__content">
+        <h1 class="content__title">Make remote work</h1>
+
+        <p class="content__text">
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </p>
+
+        <a href="#" class="content__button">Learn more</a>
+
+        <section class="content__clients">
+          <img src="images/client-databiz.svg" alt="" class="clients__logo">
+          <img src="images/client-audiophile.svg" alt="" class="clients__logo">
+          <img src="images/client-meet.svg" alt="" class="clients__logo">
+          <img src="images/client-maker.svg" alt="" class="clients__logo">
+        </section>
+      </article>
+
+    </div>
+  </main>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+<script src="js/script.js"></script>
 </body>
 </html>
