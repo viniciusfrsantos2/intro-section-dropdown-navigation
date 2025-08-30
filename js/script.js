@@ -5,7 +5,7 @@ const mobileBtnImg = document.querySelector('.header__menu-btn img');
 
 const menuContainer = document.querySelector('#menu');
 const menu = document.querySelector('.menu__container');
-const dropdownBtn = document.querySelector('.dropdown__btn');
+const dropdownBtnImgs = document.querySelectorAll('.dropdown__btn-arrow');
 
 const overlay = document.querySelector('.overlay');
 const body = document.querySelector('body');
@@ -23,6 +23,9 @@ const closeMenuMobile = () => {
 }
 
 const closeMenuDropdown = () => {
+
+    dropdownBtnImgs.forEach( btn => btn.classList.toggle('moveArrow', false));
+
     menu.querySelectorAll('.dropdown__btn').forEach( btn => btn.setAttribute('aria-expanded','false'));
     menu.querySelectorAll('.dropdown__container').forEach( drop => drop.hidden = true);    
 }
@@ -38,8 +41,6 @@ const toggleDropdown = (button) => {
 
     button.querySelector('.dropdown__btn-arrow').classList.toggle('moveArrow', !menuDrop.hidden ?  true : false);
 }
-
-
 
 menuMobileBtn.addEventListener('click', function() {
     const expanded = this.getAttribute('aria-expanded') === 'true';
