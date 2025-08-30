@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://your-solution-url.com)
-- Live Site URL: [Live site](https://your-live-site-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/responsive-intro-section-with-dropdown-navigation-xLYOemmrW9)
+- Live Site URL: [Live site](https://intro-navigation-drop.netlify.app/)
 
 ## My process
 
@@ -64,4 +64,4 @@ I want to improve my ability to create fluid and responsive layouts. I don't yet
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/viniciusfrsantos2)
+- Frontend Mentor - [@viniciusfrsantos2](https://www.frontendmentor.io/profile/viniciusfrsantos2)
